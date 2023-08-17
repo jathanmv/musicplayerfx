@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Adminincontroller">
+   <children>
+      <VBox fx:id="vboxx" prefHeight="762.0" prefWidth="282.0">
+         <children>
+            <JFXButton fx:id="addartistbtn" onAction="#fillartist" prefHeight="0.0" prefWidth="282.0" text="Add Artist" />
+            <JFXButton fx:id="addalbumbtn" onAction="#addalbuminit" prefHeight="26.0" prefWidth="334.0" text="Add New Album" />
+            <JFXButton fx:id="addnewsongbtn" onAction="#fillnewsong" prefHeight="26.0" prefWidth="321.0" text="Add New Song" />
+            <JFXButton fx:id="editsongs" onAction="#initialisetoeditdelete" prefHeight="26.0" prefWidth="338.0" text="Edit or delete existing songs" />
+            <JFXButton fx:id="editalbums" onAction="#eddelalbumsfunction" prefHeight="26.0" prefWidth="362.0" text="Edit or delete existing albums" />
+            <JFXButton fx:id="editartist" onAction="#editdelartistinitialise" prefHeight="26.0" prefWidth="315.0" text="Edit or delete artist name" />
+         </children>
+      </VBox>
+      
+      <TableView fx:id="edsongtable" layoutX="230.0" layoutY="24.0" prefHeight="482.0" prefWidth="614.0" visible="false">
+        <columns>
+          <TableColumn fx:id="editdeletesongtable" prefWidth="613.6000274658203" text="SONGS" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="deletesbgbtn" buttonType="RAISED" layoutX="315.0" layoutY="570.0" onAction="#deletesongfromdb" text="Delete" visible="false" />
+      <JFXButton fx:id="updatesngbtn" buttonType="RAISED" layoutX="653.0" layoutY="570.0" onAction="#updaterouter" text="Update" visible="false" />
+      <JFXButton fx:id="delalbumbtn" layoutX="329.0" layoutY="583.0" onAction="#delalbumfun" text="Delete" visible="false" />
+      <TextField fx:id="updtartistidfield" layoutX="537.0" layoutY="200.0" visible="false" />
+      <TextField fx:id="updateartistnmfield" layoutX="537.0" layoutY="264.0" visible="false" />
+      <Button fx:id="updtokbtn" layoutX="708.0" layoutY="342.0" mnemonicParsing="false" onAction="#editupdatefun" text="ok" visible="false" />
+      <TextField fx:id="updtalbumfield" layoutX="605.0" layoutY="187.0" visible="false" />
+      <TextField fx:id="updtalbmnmfield" layoutX="605.0" layoutY="256.0" visible="false" />
+      <TextField fx:id="updttrackidfield" layoutX="612.0" layoutY="179.0" visible="false" />
+      <TextField fx:id="updttracknamefield" layoutX="613.0" layoutY="218.0" visible="false" />
+      <TextField fx:id="updtpathnmfield" layoutX="613.0" layoutY="256.0" visible="false" />
+      <TextField fx:id="insertsongfield" layoutX="483.0" layoutY="127.0" promptText="Enter the name of the song" visible="false" />
+      <TextField fx:id="insertalbumnmfield" layoutX="483.0" layoutY="187.0" promptText="Enter the album name" visible="false" />
+      <TextField fx:id="pathfieldinsert" layoutX="488.0" layoutY="251.0" promptText="Enter the path" visible="false" />
+      <TextField fx:id="artistnminsert" layoutX="488.0" layoutY="303.0" promptText="enter the artist name" visible="false" />
+      <JFXButton fx:id="insertok" buttonType="RAISED" layoutX="697.0" layoutY="369.0" onAction="#insertokfun" prefHeight="26.0" prefWidth="42.0" text="ok" visible="false" />
+      <Label fx:id="addnewtrlabel" layoutX="354.0" layoutY="40.0" prefHeight="18.0" prefWidth="85.0" text="Add new track" visible="false" />
+      <TextField fx:id="addnewalbmfield" layoutX="539.0" layoutY="167.0" promptText="Enter the album name" visible="false" />
+      <TextField fx:id="addartistnewalbumfield" layoutX="540.0" layoutY="247.0" promptText="Enter the artist name" visible="false" />
+      <TextField fx:id="addnewartistfield" layoutX="470.0" layoutY="197.0" promptText="Enter the artist name" visible="false" />
+      <Label fx:id="updtartlabel" layoutX="340.0" layoutY="85.0" prefHeight="18.0" prefWidth="79.0" />
+   </children>
+</AnchorPane>

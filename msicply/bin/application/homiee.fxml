@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1183.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <VBox layoutY="5.0" prefHeight="751.0" prefWidth="265.0" style="-fx-background-color: #1a1c20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Label fx:id="HiUserLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="95.0" prefWidth="276.0" text="HI USER" textFill="#ded7d7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="allSongs" onAction="#initialize" prefHeight="52.0" prefWidth="276.0" text="ALL SONGS" textFill="#c9b8b8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/baseline_library_music_white_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="allArtists" onAction="#artistInitialise" prefHeight="51.0" prefWidth="260.0" text="ARTISTS" textFill="#d9cdcd">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="allAlbums" onAction="#albumInitialize" prefHeight="46.0" prefWidth="261.0" text="ALBUMS" textFill="#e7dbdb">
+               <font>
+                  <Font size="19.0" />
+               </font>
+                <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/icons8_music_record_120px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="playlistMainBtn" onAction="#playlistInitialise" prefHeight="52.0" prefWidth="266.0" text="PLAYLISTS" textFill="#e7dfdf">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/icons8_playlist_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Favourites" onAction="#setFavourites" prefHeight="47.0" prefWidth="267.0" text="FAVOURITES" textFill="#e4dddd">
+               <font>
+                  <Font size="19.0" />
+               </font>
+              
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/fav-icon2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="recently_played" onAction="#recentlyPlayed" prefHeight="53.0" prefWidth="268.0" text="RECENTLY PLAYED" textFill="#e7dddd" visible="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/rp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="trandingBtn" onAction="#trending" prefHeight="57.0" prefWidth="276.0" text="TRENDING" textFill="#eadede" visible="true">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="newPlaylistMainBtn" onAction="#CreateNewPlaylist" prefHeight="59.0" prefWidth="303.0" text="NEW PLAYLIST" textFill="#f2e7e7" visible="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/icons8_edit_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane fx:id="anchorpaneCreatePlaylist" prefHeight="86.0" prefWidth="276.0" visible="false">
+               <children>
+                 
+                  <JFXButton fx:id="okBtn" buttonType="RAISED" layoutX="229.0" layoutY="53.0" onAction="#okBtnActionHandler" style="-fx-background-color: #000000;" text="OK" textFill="#747474" />
+                  <TextField fx:id="newPlaylistTextField" alignment="CENTER" onAction="#okBtnActionHandler" prefHeight="34.0" prefWidth="276.0" promptText="Playlist Name" />
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="disappearTextFieldBtn" onAction="#disappearAnchorPane" prefHeight="82.0" prefWidth="276.0" text=" " />
+             
+          
+         </children></VBox>
+          <AnchorPane layoutX="278.0" layoutY="606.0" prefHeight="150.0" prefWidth="860.0" style="-fx-background-color: #ccccff;" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="6.0">
+         <children>
+            <JFXButton fx:id="playBtn" layoutX="314.0" layoutY="68.0" onAction="#play" prefHeight="55.0" prefWidth="122.0" text="." />
+            <JFXButton layoutX="467.0" layoutY="80.0" text="   ">
+               <graphic>
+                  <ImageView fx:id="forwardBtn" fitHeight="29.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/baseline_skip_next_white_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="254.0" layoutY="79.0" text="  ">
+               <graphic>
+                  <ImageView fx:id="backwardBtn" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/baseline_skip_previous_white_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fx:id="playImage" fitHeight="40.0" fitWidth="47.0" layoutX="352.0" layoutY="76.0" onMouseClicked="#play" pickOnBounds="true" preserveRatio="false">
+               <image>
+                  <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/baseline_play_arrow_white_18dp.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="pauseBtn" layoutX="342.0" layoutY="68.0" onAction="#pausee" prefHeight="55.0" prefWidth="122.0" text="  " visible="false" />
+            <ImageView fx:id="pauseImage" fitHeight="40.0" fitWidth="53.0" layoutX="363.0" layoutY="79.0" onMouseClicked="#pausee" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/baseline_pause_white_18dp.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nowPlaying" layoutX="67.0" layoutY="45.0" prefHeight="27.0" prefWidth="427.0" text="NOW PLAYING" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="songTable" layoutX="280.0" layoutY="177.0" prefHeight="434.0" prefWidth="858.0" style="-fx-background-color: #484848;" stylesheets="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/tablecss.css" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="175.0">
+        <columns>
+          <TableColumn id="songName" fx:id="songColumn" editable="false" minWidth="100.0" prefWidth="512.0" style="background: #002;" text="Track" />
+            <TableColumn fx:id="goToArtist" prefWidth="251.0" text="Artists" />
+          <TableColumn fx:id="addNoOfTracksCol" prefWidth="98.0" text="No Of Tracks" />
+        </columns>
+         <padding>
+            <Insets bottom="4.0" top="4.0" />
+         </padding>
+      </TableView>
+       <Label fx:id="topLabel" layoutX="298.0" layoutY="42.0" prefHeight="66.0" prefWidth="214.0" text="ALL SONGS" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+       <JFXButton fx:id="closeBtn" layoutX="1110.0" layoutY="-5.0" onAction="#Close" prefHeight="2.0" prefWidth="10.0" text="X" textAlignment="RIGHT" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <textFill>
+            <RadialGradient centerX="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="1089.0" layoutY="132.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/images/icons8_Search_52px.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="logonIconBtn" layoutX="1066.0" layoutY="6.0" onAction="#hideFunctionalities" prefHeight="34.0" prefWidth="36.0" text=" " />
+      <JFXButton fx:id="searchBtn" layoutX="1056.0" layoutY="92.0" onAction="#search" prefHeight="82.0" prefWidth="85.0" text=" " />
+      <ImageView fx:id="loginIcon" fitHeight="26.0" fitWidth="20.0" layoutX="1079.0" layoutY="13.0" onMouseClicked="#hideFunctionalities" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/user2.png" />
+         </image>
+      </ImageView>
+       <Label fx:id="loginLabel" layoutX="1026.0" layoutY="14.0" text="Login">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="clrRecent" buttonType="RAISED" layoutX="291.0" layoutY="132.0" onAction="#clearRecentlyPlayed" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: F6EAF7;" text="Clear recently played" textFill="#150000" />
+      <TextField fx:id="src" layoutX="935.0" layoutY="133.0" onAction="#search" promptText="explore" />
+   </children>
+    <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="660.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Logincontroller">
+   <children>
+      <JFXButton fx:id="signintop" buttonType="RAISED" layoutX="141.0" layoutY="126.0" onAction="#signindis" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #F4EBF4;" text="SIGN IN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="signuptop" buttonType="RAISED" layoutX="359.0" layoutY="126.0" onAction="#signupdis" prefHeight="26.0" prefWidth="173.0" style="-fx-background-color: F4EBF4;" text="SIGN UP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TextField fx:id="signinusernm" layoutX="255.0" layoutY="177.0" promptText="Enter your email" visible="false" />
+      <TextField fx:id="signupemail" layoutX="254.0" layoutY="224.0" promptText="Enter your Email Id" visible="false" />
+      <TextField fx:id="signupsecretkey" layoutX="255.0" layoutY="319.0" promptText="Enter your secret key" visible="false" />
+      <JFXButton fx:id="Goo" buttonType="RAISED" layoutX="411.0" layoutY="375.0" onAction="#LoginGo" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: F4EBF4;" text="Go" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TextField fx:id="signupusrnm" layoutX="254.0" layoutY="177.0" promptText="Enter your username" visible="false" />
+      <PasswordField fx:id="passsignin" layoutX="258.0" layoutY="244.0" promptText="Enter your password" visible="false" />
+      <JFXButton fx:id="frgtbtn" buttonType="RAISED" layoutX="218.0" layoutY="376.0" onAction="#frgtpassmethod" style="-fx-background-color: F4EBF4;" text="Forgot password" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <PasswordField fx:id="signupass" layoutX="255.0" layoutY="270.0" promptText="Enter your password" visible="false" />
+      <JFXButton fx:id="signinbtn" buttonType="RAISED" layoutX="431.0" layoutY="388.0" onAction="#SignUp" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: F4EBF4;" text="Sign up" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TextField fx:id="frgtusrnm" layoutX="254.0" layoutY="177.0" promptText="Username" visible="false" />
+      <TextField fx:id="frgtscrtkey" layoutX="255.0" layoutY="218.0" promptText="Your Secret Key" visible="false" />
+      <JFXButton fx:id="createnewpass" buttonType="RAISED" layoutX="265.0" layoutY="283.0" onAction="#createNewPswd" style="-fx-background-color: F4EBF4;" text="Create new password" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <PasswordField fx:id="newpass" layoutX="255.0" layoutY="231.0" promptText="Enter your new password" visible="false" />
+      <JFXButton fx:id="finish" buttonType="RAISED" layoutX="308.0" layoutY="319.0" onAction="#finishnewpass" style="-fx-background-color: F4EBF4;" text="Finish" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="closee" layoutX="592.0" layoutY="13.0" onAction="#closs" prefHeight="26.0" prefWidth="57.0" text="." />
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="604.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab)/MusicPlayer-d3a59e06b9f6f23ffdea702f7b0e40b31ab2886b/src/sample/icons/close-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
